@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Cairo'), local('Cairo-Regular'), url(../fonts/Cairo-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Changa';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Changa'), local('Changa-Regular'), url(../fonts/Changa-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rakkas-Regular';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Rakkas-Regular'), local('Rakkas-Regular'), url(../fonts/Rakkas-Regular.ttf) format('truetype');
+}
+
+*{
+  text-align: right;
+  font-family: 'Cairo', sans-serif;
+}
+
+.main_font{
+  font-family: 'Rakkas-Regular', sans-serif;
+  font-size: 32px;
+  text-align: center;
+  width: 100%;
+}
+.content-wrapper, .main-footer, .main-header{
+  margin: 0px;
+  margin-right: 250px;
+}
+
+.layout-fixed .main-sidebar{
+  left: initial;
+  right: 0;
+}
+
+.control-sidebar-open .control-sidebar, .control-sidebar-open .control-sidebar::before{
+  right: initial;
+  left: 0;
+}
+
+.sidebar-mini.sidebar-collapse .content-wrapper, .sidebar-mini.sidebar-collapse .main-footer, .sidebar-mini.sidebar-collapse .main-header{
+  margin: 0 !important;
+  margin-right: 4.6rem!important;
+}
+
+.nav{
+  padding: 0;
+}
+
+
+@media (min-width: 576px) {
+.content-wrapper, .main-footer, .main-header {
+    margin: 0;
+    margin-right: 250px;
+}
+}
+
+.nav-link{
+  text-align: right;
+}
+.main-font{
+  font-size: 20px !important;
+}
+.md-font{
+  font-size: 18px !important;
+}
+.nav-link p{
+  font-size: 14px;
+}
+
+.nav-sidebar>.nav-item .nav-icon{
+    margin: 0;
+    margin-left: .2rem;
+}
+
+.navbar-nav{
+  padding: 0;
+  padding-right: 0;
+}
+
+.nav-sidebar .nav-link>.right, .nav-sidebar .nav-link>p>.right{
+    right: inherit;
+    left: 1rem;
+}
+
+.user-panel .image {
+  padding: 0;
+  padding-right: .8rem;
+}
+
+.ml-auto, .mx-auto {
+  margin: 0;
+  margin-right: auto!important;
+}
+
+.brand-link{
+  display: flex;
+  padding: 0px;
+  padding-top: 9px;
+}
+
+
+
+
+.sidebar_image{
+  display: block;
+  margin: 0px auto;
+  border-radius: 50%;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
