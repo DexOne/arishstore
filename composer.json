@@ -1,0 +1,11 @@
+{
+    "name": "im/arishstore",
+    "authors": [
+        {
+            "name": "DexOne",
+            "email": "menanafen@gmail.com"
+        }
+    ],
+    "require": {
+    }
+}
