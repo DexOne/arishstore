@@ -72,7 +72,7 @@ if ($page_id == $cat['ID'] ) {
             </div>
             <div class="">
                 <p>
-                  <?php echo excerpt_len($post->Description,50, true); ?>
+                  <?php echo $post->Description; ?>
                 </p>
             </div>
             <div class="date">

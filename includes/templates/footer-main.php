@@ -74,18 +74,17 @@
     <div class="col-sm-12">
       <p class="copyright">
         جميع الحقوق محفوظة لـ
-        @ <a href="#">Full-Options</a>.</p>
+        @ <a href="#">Arish Store</a>.</p>
     </div>
     <!--- END COL -->
   </div>
   <!--- END ROW -->
 </footer>
 <!--- END CONTAINER -->
-
 <?php
 
   // store scripts name into array with variable
-  $scripts = array(/*'vue.min', */ 'jquery-3.4.1.min', 'jquery-ui.min', 'bootstrap.min', 'all.min', 'plugins/jquery-slicknav-min', 'plugins/bootstrap-dropdownhover.min', 'main');
+  $scripts = array(/*'vue.min', */ 'jquery-3.4.1.min', 'jquery-ui.min', 'bootstrap.min', 'all.min', 'plugins/jquery-slicknav-min', 'plugins/bootstrap-dropdownhover.min','plugins/swiper.min', 'main');
 
   foreach ($scripts as $val) {
     on_scripts($val);

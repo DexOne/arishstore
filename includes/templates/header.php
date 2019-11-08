@@ -9,7 +9,7 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php
-    $arr = array('bootstrap.min', 'animate.min', 'bootstrap-hover-dropdown.min', 'slicknav-min', 'main-rtl', 'media_query');
+    $arr = array('bootstrap.min', 'animate.min', 'bootstrap-hover-dropdown.min', 'slicknav-min', 'swiper.min', 'main-rtl', 'media_query');
     foreach ($arr as $val) {
       on_styles($val);
     } ?>

@@ -6,8 +6,7 @@
     <ul class="navbar-nav m-auto">
       <li class="list_home">
         <a class="site-title" href="index.php">
-          العريش ستور
-          <i class="fab fa-angellist fa-lg"></i>
+          عريش ستور
         </a>
       </li>
     </ul>
@@ -17,19 +16,19 @@
   <!-- Start RIGHT nav ONE -->
   <div class="col-md-6 down_in">
     <ul class="navbar-nav m-auto header_light header_light_in">
-      <li class="<?php if(isset($current_page) && $current_page == 'add-post.php') { echo " active_upper "; } ?>">
+      <li class="list_home_top <?php if(isset($current_page) && $current_page == 'add-post.php') { echo " active_upper "; } ?>">
         <a href="add-post.php" class="a_header">
           <i class="fas fa-edit fa-1x"></i>
           <span class=''>إضافة</span>
         </a>
       </li>
-      <li class="<?php if(isset($current_page) && $current_page == 'profile.php') { echo " active_upper "; } ?>">
+      <li class="list_home_top <?php if(isset($current_page) && $current_page == 'profile.php') { echo " active_upper "; } ?>">
         <a href="profile.php">
           <i class="fas fa-user fa-1x"></i>
           <span class=''>البروفايل</span>
         </a>
       </li>
-      <li class="<?php if(isset($current_page) && $current_page == 'edit-profile.php') { echo " active_upper "; } ?>">
+      <li class="list_home_top <?php if(isset($current_page) && $current_page == 'edit-profile.php') { echo " active_upper "; } ?>">
         <a href="edit-profile.php">
           <i class="fas fa-user-edit fa-1x"></i>
           <span class=''>
@@ -37,7 +36,7 @@
           </span>
         </a>
       </li>
-      <li>
+      <li class="list_home_top">
         <a class="home_up" href="logout.php">
           <i class="fas fa-sign-out-alt fa-1x"></i>
         </a>

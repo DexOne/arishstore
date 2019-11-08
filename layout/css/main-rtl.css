@@ -20,12 +20,17 @@
   font-display: swap;
   src: local('Rakkas-Regular'), local('Rakkas-Regular'), url(../fonts/Rakkas-Regular.ttf) format('truetype');
 }
+html{
+  overflow-x: hidden;
+}
 * {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
   font-family: 'Cairo', sans-serif !important;
   font-size: 14px !important;
+  line-height: initial !important;
+  box-sizing: border-box !important;
 }
 
 h1, h2, h3, h4, h5,h6 {}
@@ -79,9 +84,7 @@ section {
 /* Start Header */
 .front_header{
     margin: 0em auto;
-    margin-bottom: 3em;
-    background-position: top center;
-    background-color: #1a0a4c;
+    background: #fff;
 }
 
 .header_light{
@@ -92,6 +95,17 @@ section {
 
 }
 
+
+.top_rating{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  color: #ddd;
+  font-weight: 900;
+}
 
 /* End Header */
 .cat_form{
@@ -105,9 +119,6 @@ section {
 }
 /* skip Bootstrap Frame-work rules */
 
-.form-control{
-  margin: 2em auto;
-}
 .btn-success,.btn-success:hover{
   background-color: #673ab7;
   border-color: #673ab7;
@@ -216,9 +227,10 @@ section {
 
 }
 
+.list_home_top a,
 .list_home a{
-  color: #ffffff !important;
-  text-shadow: 0px 2px 3px #000;
+  color: var(--primary) !important;
+  font-weight: 900;
 }
 
 .list_homepage a{
@@ -898,14 +910,25 @@ a.uk-link-muted {
 .comment-meta span {
   color: #673ab7;
 }
+
 .post_info{
-  background: #673ab7;
   color: #fff;
-  border-radius: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: 9px auto;
+}
+.post_info img{
+  border-radius: 50%;
 }
 .post_info span{
   color: #ccc;
   font-weight: 900;
+}
+
+.user_av{
+  font-size: 15px !important;
+  color: #fff;
+  text-transform: capitalize;
 }
 /* End Comments Post */
 
@@ -937,12 +960,12 @@ a.uk-link-muted {
 
 
 .post_rating{
-  color: #2e0080;
+  color: #444;
   font-weight: 900;
 }
 
 .post_rating span{
-  color: #4caf50;
+  color: #096eda;
 }
 
 .uk-textarea {
@@ -1071,6 +1094,9 @@ img.comment-avatar {
     text-transform: capitalize;
 }
 
+.a_header{
+  color: #fff;
+}
 a.log-sign {
   color: #ffffff !important;
   font-size: 16px !important;
@@ -1079,8 +1105,9 @@ a.log-sign {
 }
 
 .down_nav{
-  background: #ddd;
   padding: 0px;
+  border-top: 1px solid #ddd;
+  background: #096eda;
 }
 
 .site-title{
@@ -1088,6 +1115,7 @@ a.log-sign {
   font-size: 32px !important;
   font-weight: 900;
 }
+
 .child_cat{
   background: #cc5577;
   margin: 0px auto;
@@ -1158,8 +1186,9 @@ a.log-sign {
     width: 100%;
   }
    .down_nav{
-     padding: 0;
-   }
+     padding: 3px;
+     border-top: 1px solid #ddd;
+      }
 
 	.slicknav_menu {
 		display:block;
@@ -1169,12 +1198,7 @@ a.log-sign {
 
 
 
-.a_header {
-    color: #1a0a4c  !important;
-  }
-.a_header:hover {
-  color: #FF5722 !important;
-}
+
 
 .header_light li a svg{
   margin-left: 9px;
@@ -1195,25 +1219,13 @@ a.log-sign {
 
 
 .list_home{
-  padding: 9px;
+  padding: 4px;
   width: 100%;
   display: flex;
 }
 .list_home a{
   min-height: inherit !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1380,4 +1392,95 @@ input::-moz-focus-inner { border: 0; }
   color: #673ab7;
   font-weight: 900;
   font-size: 15px !important;
+}
+
+.log_nav,
+.nav_in{
+  padding: 0;
+}
+
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  padding: 0em;
+}
+img.img-responsive.img_span {
+    height: 300px;
+}
+
+.hold_slider{
+  margin: 0;
+  padding: 0;
+}
+
+.img_prod{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.overlay_prod{
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+  flex-direction: row;
+  padding: 1em;
+}
+
+.prod_name a{
+  color: #fff;
+  font-size: 32px !important;
+}
+.prod_span,
+.prod_name a{
+  font-weight: 900;
+}
+
+.swiper-slide {
+    width: 100% !important;
+    margin: auto;
+}
+
+
+.active_tab{
+  display: flex!important;
+  align-items: center;
+}
+.active_tab a{
+  color: red;
+
+}
+
+.tab-pane{
+  min-height: 150px;
+  margin: 9px;
+  border-bottom: 1px solid #096eda;
+}
+
+.post-content,
+.post_rating,
+.post_rating span {
+    text-transform: capitalize;
+    color: #096eda;
+    padding: 1em;
+    line-height: 2em;
+    margin: 0em auto;
+    font-size: 19px !important;
+}
+
+.post_hold_info{
+  background: #b13743;
+  padding: 1em;
+  margin: 1em auto;
+}
+
+.dropdown {
+    overflow: hidden;
 }

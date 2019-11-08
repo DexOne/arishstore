@@ -84,3 +84,57 @@ $('.dropdown-toggle').click(function(e) {
 
 
 });
+
+
+
+var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    autoplay: {
+      delay: 3000,
+    },
+  })
+
+
+
+
+
+
+
+
+
+
+  window.addEventListener("load", function() {
+
+	// store tabs variable
+	var myTabs = document.querySelectorAll("ul.nav-tabs > li");
+
+	function myTabClicks(tabClickEvent) {
+
+		for (var i = 0; i < myTabs.length; i++) {
+			myTabs[i].classList.remove("active_tab");
+		}
+
+		var clickedTab = tabClickEvent.currentTarget;
+
+		clickedTab.classList.add("active_tab");
+
+		tabClickEvent.preventDefault();
+
+		var myContentPanes = document.querySelectorAll(".tab-pane");
+
+		for (i = 0; i < myContentPanes.length; i++) {
+			myContentPanes[i].classList.remove("active_tab");
+		}
+
+		var anchorReference = tabClickEvent.target;
+		var activePaneId = anchorReference.getAttribute("href");
+		var activePane = document.querySelector(activePaneId);
+
+		activePane.classList.add("active_tab");
+
+	}
+
+	for (i = 0; i < myTabs.length; i++) {
+		myTabs[i].addEventListener("click", myTabClicks)
+	}
+});
