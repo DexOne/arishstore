@@ -1,10 +1,5 @@
 /* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .front_header{
-    margin: 0 auto;
-    padding: 0;
-    margin-bottom: 2em;
-  }
   .list_nav{
     width: 100%;
     text-align: center;

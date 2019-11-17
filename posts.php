@@ -10,7 +10,7 @@
 ob_start(); // Output Buffering Start
 session_start();
 global $session_user;
-$pageTitle = 'Posts';
+$pageTitle = 'الأقسام';
 // get init app core
 include 'init.php';
 // get header
@@ -52,69 +52,86 @@ $hook_up->inc_header();
   <main class="container">
     <div class="text-center row">
 			<div class="col-sm-12">
-				<h1 class="post_title">
+				<h4 class="post_title">
 						<?php echo $posts['Name']; ?>
-						</h1>
+					</h4>
 			</div>
-      <div class="col-sm-12 col-md-6">
+			<div class="col-sm-12 col-md-4">
+				<img class="img-responsive img-thumbnail post_img" src="admin/uploads/posts/<?php echo $posts['Image']; ?>" alt="">
+			</div>
+      <div class="col-sm-12 col-md-8">
 
 				<div class="row">
-					<div class="col-sm-12">
-						<ul class="nav nav-tabs">
-							<li class="active_tab"><a href="#tab-1">وصف المنتج</a></li>
-							<li class=""><a href="#tab-2">السعر</a></li>
-							<li class=""><a href="#tab-3">التقييم</a></li>
-						</ul>
-						<div class="tab-content">
-							<div id="tab-1" class="tab-pane active_tab">
-									<p class="post-content text-center">
-										<?php	echo $posts['Description']; ?>
-									</p>
-							</div>
-							<div id="tab-2" class="tab-pane">
-								<div class="col-sm-12">
-									<p class="post_rating">
-										<?php echo 'السعر : <span>' . $posts['Price'] . ' <i class="fas fa-dollar-sign" ></i></span>'; ?>
-									</p>
-								</div>
-							</div>
-							<div id="tab-3" class="tab-pane">
-								<div class="col-sm-12">
-									<p class="post_rating">
-										<?php echo 'تقييم : <span>' . $posts['Rating'] . ' <i class="fas fa-star" ></i></span>'; ?>
-									</p>
-								</div>
-							</div>
-						</div>
+					<div class="col-sm-9">
+						<p class="post-content text-center">
+							<?php	echo $posts['Description']; ?>
+						</p>
+					</div>
+					<div class="col-sm-3">
+						<p class="post_rating">
+							<?php echo $posts['Price'] . ' <i class="fas fa-dollar-sign" ></i>'; ?>
+						</p>
 					</div>
 					<div class="col-sm-12">
-						<div class="row post_hold_info">
-							<div class="col-md-6 post_info">
-								<img width="70" src="admin/uploads/avatars/<?php echo $posts['avatar']; ?>" alt="">
-								<h3>
-								<a class="user_av">
-									<?php echo $posts['Username']; ?>
-								</a>
-								</h3>
-							</div>
-							<div class="col-md-6">
-								<p class="post_info">
-									<?php echo $posts['Status'] == 1 ? "تم نشره فى" : ""; ?>
-									<span><?php echo date("M Y", strtotime($posts['Add_Date']));?></span>
-								</p>
-								<p class="post_info">
-									<?php echo $posts['cat_name']; ?>
-								</p>
-							</div>
-						</div>
+						<p class="post_rating">
+							<?php echo 'تقييم : <span>' . $posts['Rating'] . ' <i class="fas fa-star" ></i></span>'; ?>
+						</p>
 					</div>
-
 				</div>
+      </div>
+			<div class="col-sm-12">
+				<ul class="nav nav-tabs">
+					<li class="active_tab"><a href="#tab-1">وصف المنتج</a></li>
+					<li class=""><a href="#tab-2">السعر</a></li>
+					<li class=""><a href="#tab-3">التقييم</a></li>
+				</ul>
+				<div class="tab-content">
+					<div id="tab-1" class="tab-pane active_tab">
+							<p class="post-content text-center">
+								<?php	echo $posts['Description']; ?>
+							</p>
+					</div>
+					<div id="tab-2" class="tab-pane">
+						<div class="col-sm-12">
+							<p class="post_rating">
+								<?php echo 'السعر : <span>' . $posts['Price'] . ' <i class="fas fa-dollar-sign" ></i></span>'; ?>
+							</p>
+						</div>
+					</div>
+					<div id="tab-3" class="tab-pane">
+						<div class="col-sm-12">
+							<p class="post_rating">
+								<?php echo 'تقييم : <span>' . $posts['Rating'] . ' <i class="fas fa-star" ></i></span>'; ?>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      </div>
-      <div class="col-sm-12 col-md-6">
-				<div class="img-responsive img-thumbnail post_img" style="background-image: url('admin/uploads/posts/<?php echo $posts['Image']; ?>');"></div>
-      </div>
+			<!-- author box -->
+			<div class="col-sm-12">
+				<div class="row post_hold_info">
+					<div class="col-md-6 post_info">
+						<img width="70" src="admin/uploads/avatars/<?php echo $posts['avatar']; ?>" alt="">
+						<h3>
+						<a class="user_av">
+							<?php echo $posts['Username']; ?>
+						</a>
+						</h3>
+					</div>
+					<div class="col-md-6">
+						<p class="post_info">
+							<?php echo $posts['Status'] == 1 ? "تم نشره فى" : ""; ?>
+							<span><?php echo date("M Y", strtotime($posts['Add_Date']));?></span>
+						</p>
+						<p class="post_info">
+							<?php echo $posts['cat_name']; ?>
+						</p>
+					</div>
+				</div>
+			</div>
+
+
 			<div class="col-sm-12 tags">
 				<?php
 				$post_tags = explode(',', $posts['tags']);
@@ -126,6 +143,15 @@ $hook_up->inc_header();
 				}
 						 ?>
 			</div>
+		</div>
+		<div class="row">
+			<?php
+			// arr to store homepage sections title
+			$homepage_sec = array('random_posts');
+			// loop through homepage sections
+			foreach ($homepage_sec as $sec) { include($hook_up->component($sec, true)); }
+
+			?>
 		</div>
     <?php include $templates . 'comments/comments.php' ?>
   </main>

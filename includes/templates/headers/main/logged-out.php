@@ -1,10 +1,13 @@
 <!-- Start nav one -->
+<div class="container">
 <nav class="row col-sm-12 m-auto navbar log_nav">
 
   <!-- Start LEFT nav ONE -->
-  <div class="col-md-3">
-    <ul class="navbar-nav m-auto">
-      <li class="list_home">
+  <div class="col-md-4">
+    <ul class="row">
+      <li class="list_home_top">
+        <img width="55" src="admin/uploads/arish-store.jpeg" alt="">
+
         <a class="site-title" href="index.php">
           عريش ستور
         </a>
@@ -12,18 +15,14 @@
     </ul>
 
   </div>
-  <!-- Search form -->
-    <form class="form-inline md-form form-sm mt-0 col-md-3">
-      <i class="fas fa-search" aria-hidden="true"></i>
-      <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-
+  <div class="col-md-4">
+    <form class="form-inline md-form form-sm mt-0 search_form">
+      <i class="fas fa-search"></i>
+      <input class="form-control text-center search_input" type="text" placeholder="ابحث فى الموقع" aria-label="Search">
     </form>
-
-
-  <!-- End LEFT nav ONE -->
-
+  </div>
   <!-- Start RIGHT nav ONE -->
-  <div class="col-md-6">
+  <div class="col-md-4">
     <ul class="row">
       <li class="list_home_top dropdown">
         <a class="nav-link a_header dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
@@ -47,11 +46,29 @@
         </ul>
 
       </li>
-      <li class="list_home_top">
+      <li class="list_home_top dropdown">
         <a class="nav-link a_header" href="#">
           <i class="fas fa-bolt fa-2x" aria-hidden="true"></i>
           المساعدة
         </a>
+
+        <ul class="child_cat dropdown-menu">
+          <li class="upper_li">
+             <a class="upper_a" href="">
+               عربى
+             </a>
+          </li>
+          <li class="upper_li">
+             <a class="upper_a" href="">
+               اتصل بنا
+             </a>
+          </li>
+          <li class="upper_li">
+             <a class="upper_a" href="">
+               شكاوى واقتراحات
+             </a>
+          </li>
+        </ul>
       </li>
 
       <li class="list_home_top">
@@ -65,6 +82,7 @@
   </div>
   <!-- Start RIGHT nav ONE -->
 </nav>
+</div>
 <!-- end nav one -->
 <!-- Start nav two  -->
 <nav class="navbar navbar-expand-lg col-sm-12 down_nav">

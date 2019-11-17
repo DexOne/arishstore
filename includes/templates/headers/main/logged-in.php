@@ -1,3 +1,30 @@
+<!-- Start nav two  -->
+<nav class="navbar navbar-expand-lg col-sm-12 upper_nav">
+<div class="container row">
+    <ul id="menu_upper" class="col-sm-12 col-md-10 row text-right">
+      <li class="upper_li">
+         <a class="upper_a" href="">
+           <img src="admin/uploads/langs/ar.png" alt="">
+         </a>
+      </li>
+      <li class="upper_li">
+         <a class="upper_a" href="">
+           اتصل بنا
+         </a>
+      </li>
+      <li class="upper_li">
+         <a class="upper_a" href="">
+           شكاوى واقتراحات
+         </a>
+      </li>
+    </ul>
+    <!-- Search form -->
+      <form class="col-sm-12 col-md-2 form-inline md-form form-sm mt-0">
+        <input class="form-control text-center search_input" type="text" placeholder="ابحث فى الموقع" aria-label="Search">
+      </form>
+
+  </div>
+</nav>
 <!-- Start nav one -->
 <nav class="row col-sm-12 m-auto navbar nav_in">
 

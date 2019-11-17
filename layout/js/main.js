@@ -9,6 +9,18 @@ $(function () {
     'showChildren': false
   });
 
+
+  $('#menu_upper').slicknav({
+    'label':'أدوات مساعدة',
+    'duplicate': true,
+    'easingOpen': 'swing',
+    'prependTo': '.upper_nav',
+    'showChildren': false
+  });
+
+
+  // commenting down_nav
+
   $(window).scroll(function() {
     if ($(this).scrollTop() > 0) {
       $('.down_nav').slideUp();
@@ -16,6 +28,7 @@ $(function () {
       $('.down_nav').slideDown();
     }
   });
+
     // $('.live-title').keyup(function (){
     //   $('.live-preview .captionone h3').text($(this).val());
     // });
@@ -92,13 +105,7 @@ var mySwiper = new Swiper ('.swiper-container', {
     autoplay: {
       delay: 3000,
     },
-  })
-
-
-
-
-
-
+  });
 
 
 
@@ -138,3 +145,38 @@ var mySwiper = new Swiper ('.swiper-container', {
 		myTabs[i].addEventListener("click", myTabClicks)
 	}
 });
+
+
+
+
+// for icons
+if (!('boxShadow' in document.body.style)) {
+    document.body.setAttribute('class', 'noBoxShadow');
+}
+
+document.body.addEventListener("click", function(e) {
+    var target = e.target;
+    if (target.tagName === "INPUT" &&
+        target.getAttribute('class').indexOf('liga') === -1) {
+        target.select();
+    }
+});
+
+(function() {
+    var fontSize = document.getElementById('fontSize'),
+        testDrive = document.getElementById('testDrive'),
+        testText = document.getElementById('testText');
+    function updateTest() {
+        testDrive.innerHTML = testText.value || String.fromCharCode(160);
+        if (window.icomoonLiga) {
+            window.icomoonLiga(testDrive);
+        }
+    }
+    function updateSize() {
+        testDrive.style.fontSize = fontSize.value + 'px';
+    }
+    fontSize.addEventListener('change', updateSize, false);
+    testText.addEventListener('input', updateTest, false);
+    testText.addEventListener('change', updateTest, false);
+    updateSize();
+}());
